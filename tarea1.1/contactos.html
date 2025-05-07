@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="cabecera" title="Cabecera principal del sitio">
+        <h1>La Fruta</h1>
+        <p><small>Bienvenidos a nuestra página web con nuestro catálogo de frutas y verduras</small></p>
+    </header>
+    <nav>
+        <ul class="menu" title="Menú Principal de Navegación">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+            <li><a href="frutas.html">Sección de Frutas</a></li>
+            <li><a href="verduras.html">Sección de Verduras</a></li>
+            <li><a href="frutos-secos.html">Sección de Frutos secos</a></li>
+        </ul>
+    </nav>
+    <form action="" id="formRegistro">
+        <h1>Regístrate y entérate de todas nuestras ofertas</h1>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="20" pattern="[A-Za-zÀ-ÿ\s]+"> 
+        </div>
+        <div>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required minlength="2" maxlength="20" pattern="[A-Za-zÀ-ÿ\s]+">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="pais">País:</label>
+            <select name="pais" id="pais" required>
+                <option value="">Seleciona un país</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="China">China</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Chile">Chile</option>
+            </select>
+        </div>
+        <div>
+            <label for="provincia">Provincia:</label>
+            <select name="provincia" id="provincia" required>
+                <option value="">Seleciona una provincia</option>
+                <option value="Pichincha">Pichincha</option>
+                <option value="Cotopaxi">Cotopaxi</option>
+                <option value="Tungurahua">Tungurahua</option>
+                <option value="Santa Elena">Santa Elena</option>
+            </select>
+        </div>
+        <button type="submit">Registrarse</button>
+    </form>
+<footer id="pie" title="Pie de página">
+    <p><strong>Derechos reservados 2025 - La Fruta</strong></p>
+</footer>
+</body>
+</html>
