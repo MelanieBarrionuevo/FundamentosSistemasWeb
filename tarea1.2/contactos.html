@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="cabecera" title="Cabecera principal del sitio">
+        <h1>La Fruta</h1>
+        <p><small>Bienvenidos a nuestra página web con nuestro catálogo de frutas y verduras</small></p>
+    </header>
+    <nav>
+        <ul class="menu" title="Menú Principal de Navegación">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+            <li><a href="frutas.html">Sección de Frutas</a></li>
+            <li><a href="verduras.html">Sección de Verduras</a></li>
+            <li><a href="frutos-secos.html">Sección de Frutos secos</a></li>
+        </ul>
+    </nav>
+        <form action="" id="formregistro">
+        <h1>Registro de usuarios</h1>
+        <div style="display: flex; flex-direction: column; width: 20%;">
+            <label for="">Nombre</label>
+            <input type="text" name="nombre" required style="border-radius: 3px; 
+        border: none; font-size: medium;">
+            <br>
+            <br>
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: column; width: 20%;">
+            <label for="">Apellido</label>
+            <input type="text" name="apellido" required style="border-radius: 3px; 
+        border: none; font-size: medium;">
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: column; width: 20%;">
+            <label for="">Correo</label>
+            <input type="email" name="correo" required style="border-radius: 3px; 
+        border: none; font-size: medium;">
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: column; width: 20%;">
+            <label for="">Edad</label>
+            <input type="text" name="edad" id="edad" required style="border-radius: 3px; 
+        border: none; font-size: medium;">
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: column; width: 20%;">
+            <label for="">Pais</label>
+            <select name="pais" required style="border-radius: 3px; 
+        border: none; font-size: medium; cursor: pointer;">
+                <option value="">Selecciona un pais</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="México">México</option>
+                <option value="Francia">Francia</option>
+                <option value="Japón">Japón</option>
+                <option value="Italia">Italia</option>
+            </select>
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: column; width: 20%;">
+            <label for="">Provincia</label>
+            <br>
+            <select name="provincia" required style="border-radius: 3px; 
+        border: none; font-size: medium; cursor: pointer;">
+                <option value="">Selecciona una provincia</option>
+                <option value="Pichincha">Pichincha</option>
+                <option value="Guayas">Guayas</option>
+                <option value="Manabí">Manabí</option>
+                <option value="Azuay">Azuay</option>
+                <option value="Tungurahua">Tungurahua</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit" style="border-radius: 3px; 
+        border: none; background-color: darkolivegreen; font-size: x-large;
+        color: white; cursor: pointer;">Registrarse</button>
+    </form>
+    <script src="formulario.js"></script> 
+    
+</body>
+</html>
