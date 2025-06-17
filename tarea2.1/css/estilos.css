@@ -1,0 +1,300 @@
+/* Fuente y estructura básica */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 1px;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #465874;
+}
+
+p {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    color: #222;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: double;
+}
+
+/* Paginación */
+.paginacion {
+    margin: 30px auto;
+    text-align: center;
+}
+.paginacion a {
+    color: rgb(95, 148, 179);
+    padding: 10px 16px;
+    text-decoration: none;
+    border: 2px solid #465874;
+    border-radius: 5px;
+    margin: 0 2px;
+    font-weight: bold;
+}
+.paginacion a.active {
+    background-color: rgb(82, 89, 150);
+    color: white;
+    border: 2px solid rgb(76, 81, 128);
+}
+.paginacion a:hover:not(.active) {
+    background-color: rgb(109, 114, 160);
+    color: white;
+    border: 2px solid rgb(76, 81, 128);
+}
+
+/* Contenedores para problemas */
+.hamburguesa,
+.focos,
+.contador,
+.ahorro,
+.info {
+    background-color: rgb(95, 148, 179);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 400px;
+    color: white;
+    font-size: 18px;
+}
+
+/* Botones (estilo opcional si deseas unificar) */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #465874;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+button:hover {
+    background-color: rgb(82, 89, 150);
+}
+
+/* Estilo para los resultados */
+#resultado,
+#resultadoHamburguesa,
+#resultadoFocos,
+#resultadoNumeros,
+#resultadoAhorro {
+    background-color: rgb(158, 204, 231);
+    padding: 20px;
+    border-radius: 10px;
+    color: #222;
+    margin-top: 20px;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* Grid para el div.grid de index.html */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+    padding: 30px 10vw 30px 10vw;
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-items: center;
+}
+
+.grid section {
+    background-color: rgb(158, 204, 231);
+    border-radius: 10px;
+    padding: 24px;
+    color: #000000;
+    box-shadow: 0 2px 8px rgba(70, 88, 116, 0.08);
+    font-size: 17px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.grid section:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(70, 88, 116, 0.15);
+}
+.grid h2 {
+    color: #465874;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 22px;
+    text-align: left;
+}
+
+.grid1 {
+    background-color: rgb(95, 148, 179);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 400px;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(70, 88, 116, 0.08);
+}
+.grid1 label {
+    font-weight: bold;
+}
+.grid1 input[type="text"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #b3c6d4;
+    font-size: 16px;
+}
+.grid1 button {
+    padding: 10px 20px;
+    background-color: #465874;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.grid1 button:hover {
+    background-color: rgb(82, 89, 150);
+}
+#resultadoNumeros {
+    background-color: rgb(158, 204, 231);
+    padding: 15px;
+    border-radius: 8px;
+    color: #222;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.grid2 {
+    background-color: rgb(158, 204, 231);
+    padding: 24px 32px;
+    border-radius: 12px;
+    margin: 30px auto 0 auto;
+    max-width: 400px;
+    min-width: 180px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid2 p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap; /* <-- Esto evita el salto de línea */
+}
+
+/* Estilo para el select */
+select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #b3c6d4;
+    background-color: #f4f8fb;
+    color: #222;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    outline: none;
+    transition: border 0.2s;
+}
+select:focus {
+    border: 2px solid #465874;
+}
+
+/* Estilo para los option (limitado por navegador) */
+option {
+    background: #e3f0fa;
+    color: #222;
+    font-size: 16px;
+}
+
+/* Estilo para los labels */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+/* Estilo para los inputs */
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #b3c6d4;
+    background-color: #f4f8fb;
+    color: #222;
+    font-size: 16px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    transition: border 0.2s;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border: 2px solid #465874;
+    outline: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .grid {
+        padding: 20px 2vw 20px 2vw;
+        gap: 16px;
+    }
+    .grid section {
+        font-size: 15px;
+        padding: 16px;
+    }
+    .grid h2 {
+        font-size: 18px;
+    }
+}
+@media (max-width: 600px) {
+    .paginacion a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .hamburguesa,
+    .focos,
+    .contador,
+    .ahorro,
+    .info {
+        padding: 15px;
+        font-size: 14px;
+        max-width: 95vw;
+    }
+    #resultado,
+    #resultadoHamburguesa,
+    #resultadoFocos,
+    #resultadoNumeros,
+    #resultadoAhorro {
+        padding: 10px;
+        font-size: 13px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 10px 0;
+        gap: 10px;
+    }
+    .grid section {
+        font-size: 13px;
+        padding: 10px;
+    }
+    .grid h2 {
+        font-size: 16px;
+    }
+}

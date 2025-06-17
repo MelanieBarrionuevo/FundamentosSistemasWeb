@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 2</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!--paginacion-->
+    <div class="paginacion">
+        <a href="index.html">Principal</a>
+        <a href="problema1.html">1</a>
+        <a href="problema2.html" class="active">2</a>
+        <a href="problema3.html">3</a>
+        <a href="problema4.html">4</a>
+        <a href="problema5.html">5</a>
+    </div>
+    <h1>Naufrago Satisfecho</h1>
+    <div class="hamburguesa">
+        <label for="">Número de hamburguesas</label>
+        <input type="number" id="numero" placeholder="Ej: 10">
+
+        <label for="">Escoja el tipo de hamburguesa</label>
+        <select name="" id="tipo">
+            <option value="S">Sencillas</option>
+            <option value="D">Dobles</option>
+            <option value="T">Triples</option>
+        </select>
+        <br>
+        <label for="">¿El pago se realizará con tarjeta?</label>
+        <select name="" id="pago">
+            <option value="1">Si</option>
+            <option value="2">No</option>
+        </select>
+
+        <br>
+        <button onclick="calcularPago()">Calcular Pago</button>
+
+        <br>
+        <div id="resultadoHamburguesa" class="info"></div>
+
+    </div>
+
+    <script src="js/funciones2.js"></script>
+</body>
+</html>
