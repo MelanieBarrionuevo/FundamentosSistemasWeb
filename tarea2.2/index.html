@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué paquete puedes comprar en diciembre?</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <div class="navbar-container">
+            <div class="logo">🎁 Paquetes de Diciembre</div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div class="primary nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="pagina.html">Paquetes</a>
+            </div>
+            <div class="secondary nav-links">
+                <a href="#">Contacto</a>
+                <a href="#">Ayuda</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="notification">
+        <span class="material-symbols-outlined">redeem</span>
+        <span class="count">!</span>
+    </div>
+
+    <main class="grid">
+        <div class="card form-card">
+            <h2>¿Qué paquete puedes comprar?</h2>
+            <label for="dinero">Ingresa el dinero que recibirás en diciembre:</label>
+            <input type="number" id="dinero" min="0" placeholder="Ej: 15000">
+            <button onclick="determinarPaquete()">Ver paquete</button>
+            <p id="paquete" class="resultado"></p>
+        </div>
+
+        <div class="card info-card">
+            <h3>Información de Paquetes</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Paquete</th>
+                            <th>Condición</th>
+                            <th>Incluye</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A</td>
+                            <td>&ge; $50,000</td>
+                            <td>Televisión, un modular, 3 pares de zapatos, 5 camisas, 5 pantalones</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>&ge; $20,000 y &lt; $50,000</td>
+                            <td>Grabadora, 3 pares de zapatos, 5 camisas, 5 pantalones</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>&ge; $10,000 y &lt; $20,000</td>
+                            <td>2 pares de zapatos, 3 camisas, 3 pantalones</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>&lt; $10,000</td>
+                            <td>1 par de zapatos, 2 camisas, 2 pantalones</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div class="pagination">
+        <a href="index.html" class="active">1</a>
+        <a href="pagina.html">2</a>
+        <a href="#">3</a>
+    </div>
+
+    <script src="funciones.js"></script>
+</body>
+</html>
