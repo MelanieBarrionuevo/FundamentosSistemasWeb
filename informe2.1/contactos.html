@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contactos</title>
+  <link rel="stylesheet" href="css/contactos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+  <nav class="desktop">
+    <span class="logo">TURISMO</span>
+    <button class="menu-toggle" id="menuToggle">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <ul id="mainMenu" class="primary nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#">Destinos</a></li>
+      <li><a href="#">Gastronomía</a></li>
+      <li><a href="contactos.html" class="active">Contactos</a></li>
+      <li><a href="#">Eventos</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="contacto-grid">
+    <form class="form-contacto">
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" required minlength="5" maxlength="50"> 
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="30">
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required minlength="10" maxlength="100"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="progressbar-container">
+      <div class="outer-box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+            </linearGradient>
+          </defs>
+          <circle
+            id="progress-circle"
+            cx="100"
+            cy="100"
+            r="80"
+            stroke-linecap="round"
+            stroke="url(#GradientColor)"
+            stroke-width="15"
+            fill="none"
+          />
+        </svg>
+        <div class="inner-box" id="progress-text">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/funciones.js"></script>
+</body>
+</html>

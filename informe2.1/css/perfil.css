@@ -1,0 +1,431 @@
+/* --- GENERAL --- */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f7f8fa;
+    color: #240750;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- MENÚ VERTICAL --- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 70px; /* Más ancho en estado contraído */
+    background: linear-gradient(135deg, #240750 0%, #344c64 100%);
+    overflow: hidden;
+    transition: width 0.3s;
+    z-index: 999;
+    justify-content: center;
+}
+
+nav:hover {
+    width: 320px;
+}
+
+nav .bar {
+    background-color: #1a1333;
+    color: white;
+    display: flex;
+    justify-content: end;
+}
+
+nav .user {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 22px;
+    height: 180px;
+    transform: translateX(-220px);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+nav:hover .user {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+nav .user img {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    border: 3px solid #57a6a1;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(36,7,80,0.08);
+}
+
+nav .user .name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #57a6a1;
+    margin-bottom: 2px;
+}
+
+nav .user .role {
+    font-size: 0.95em;
+    color: #fff;
+    opacity: 0.7;
+}
+
+nav .links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente los iconos */
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+nav .links a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    overflow: hidden;
+    padding: 18px 0;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 22px;
+    transition: background 0.3s, color 0.3s, flex-direction 0.3s, align-items 0.3s;
+    white-space: nowrap;
+}
+
+nav .links a:hover,
+nav .links a:focus {
+    background: #57a6a1;
+    color: #fff;
+    outline: none;
+}
+
+nav .links a .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+nav .links a .title {
+    display: none;
+    margin-left: 0;
+}
+
+nav:hover .links a {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding-left: 18px;
+}
+
+nav:hover .links a .title {
+    display: inline;
+    margin-left: 10px;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.about-container {
+    max-width: 1200px;
+    margin: 48px auto;
+    padding: 0 24px;
+    margin-left: 120px; /* espacio para el menú vertical */
+}
+
+/* --- ABOUT ME --- */
+.about-me {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 0 18px rgba(36, 7, 80, 0.08);
+    padding: 32px;
+    gap: 32px;
+    margin-bottom: 44px;
+    color: #344c64;
+    align-items: center;
+}
+
+.about-me .profile-image img {
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(36, 7, 80, 0.13);
+    object-fit: cover;
+}
+
+.about-me .info {
+    flex: 1;
+}
+
+.about-me .info h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+    color: #240750;
+}
+
+.about-me .tagline {
+    display: inline-block;
+    background-color: #57a6a1;
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.about-me p {
+    line-height: 1.7;
+}
+
+.personal-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+}
+
+.personal-details li {
+    margin: 7px 0;
+    font-size: 16px;
+}
+
+.personal-details strong {
+    color: #240750;
+}
+
+.socials a {
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 12px;
+    color: #57a6a1;
+    transition: color 0.2s;
+}
+.socials a:hover,
+.socials a:focus {
+    color: #240750;
+    outline: none;
+}
+
+/* --- SERVICIOS --- */
+.services {
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 32px;
+    box-shadow: 0 0 18px rgba(36, 7, 80, 0.08);
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #240750;
+    margin-bottom: 32px;
+    letter-spacing: 0.5px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.card {
+    background-color: #344c64;
+    color: #fff;
+    width: 240px;
+    border-radius: 12px;
+    padding: 22px 18px;
+    text-align: center;
+    box-shadow: 0 6px #240750;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s;
+    will-change: transform;
+}
+.card:hover,
+.card:focus-within {
+    transform: translateY(-7px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(36,7,80,0.13);
+}
+
+.card .icon {
+    font-size: 46px;
+    color: #57a6a1;
+    margin-bottom: 12px;
+    transition: transform 0.3s, color 0.3s;
+}
+.card:hover .icon,
+.card:focus-within .icon {
+    transform: scale(1.18);
+    color: #fff;
+}
+
+.card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.card .cta {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 18px;
+    background-color: #57a6a1;
+    color: #fff;
+    border-radius: 22px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    font-weight: 500;
+}
+.card .cta:hover,
+.card .cta:focus {
+    background: #240750;
+    color: #fff;
+    outline: none;
+}
+
+/* --- BARRA DE PROGRESO CIRCULAR --- */
+.progress-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.progressbar-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.progressbar-container .outer-box {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 14px rgba(36, 7, 80, 0.13);
+}
+
+.progressbar-container .inner-box {
+  background-color: white;
+  font-size: 24px;
+  font-weight: bold;
+  color: #240750;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.05);
+}
+
+.progressbar-container svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+  z-index: 1;
+}
+
+.progressbar-container circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472; /* 2πr for r=75 ~ 472 */
+  stroke-dashoffset: 472;
+  animation: loading 2s linear forwards;
+}
+
+@keyframes loading {
+  to {
+    stroke-dashoffset: 236; /* 50% visible */
+  }
+}
+
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    nav {
+        width: 44px;
+    }
+    nav:hover {
+        width: 140px;
+    }
+    nav .user img {
+        width: 48px;
+        height: 48px;
+    }
+    nav .links a {
+        width: 140px;
+        font-size: 15px;
+        padding: 8px 10px;
+    }
+    .about-container {
+        margin-left: 0;
+        padding: 0 10px;
+    }
+    .about-me {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+    .about-me .profile-image img {
+        width: 90px;
+    }
+    .services {
+        padding: 10px;
+    }
+    .cards {
+        gap: 14px;
+    }
+    .card {
+        width: 95%;
+        max-width: 320px;
+        padding: 12px 6px;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    nav {
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 180px;
+        background: linear-gradient(135deg, #240750 0%, #344c64 100%);
+        box-shadow: 2px 0 8px rgba(36,7,80,0.07);
+        z-index: 1100;
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+    nav.show {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,237 @@
+/* ======= ESTILOS GENERALES ======= */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #ffffff;
+  color: #344C64;
+}
+
+/* ======= NAVBAR ======= */
+nav {
+  background: linear-gradient(135deg, #442863 0%, #4f1c9c 100%);
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+nav .desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+/* Eliminar puntos de lista y estilo del menú */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav ul.primary.nav-links {
+  padding-left: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+
+nav a:hover {
+  background: linear-gradient(135deg, #8981d4 0%, #7276b3 100%);
+  color: #ffffff;
+}
+
+/* Botón hamburguesa oculto por defecto */
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Menú principal estilo */
+.primary.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.primary.nav-links.active {
+  display: flex;
+}
+
+/* ======= FORMULARIO DE CONTACTO ======= */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  max-width: 900px;
+  margin: 40px auto;
+  width: 100%;
+}
+
+.form-contacto {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(106, 17, 203, 0.10);
+  padding: 32px 28px 24px 28px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-sizing: border-box;
+}
+
+.form-contacto label {
+  color: #4b2067;
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  padding: 10px 2px;
+  border-radius: 8px;
+  border: 1.5px solid #bdbddd;
+  background: #f4f7fb;
+  font-size: 1rem;
+  color: #222;
+  transition: border 0.2s, box-shadow 0.2s;
+  margin-bottom: 8px;
+  resize: vertical;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  border: 1.5px solid #6a11cb;
+  box-shadow: 0 2px 8px rgba(106, 17, 203, 0.10);
+  outline: none;
+  background: #fff;
+}
+
+.form-contacto button[type="submit"] {
+  background: linear-gradient(90deg, #007bff 60%, #6a11cb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(106, 17, 203, 0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.form-contacto button[type="submit"]:hover {
+  background: linear-gradient(90deg, #6a11cb 0%, #007bff 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* ======= PROGRESS BAR CIRCULAR ======= */
+.progressbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.outer-box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #4b2067;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+/* ======= RESPONSIVE ======= */
+@media screen and (max-width: 768px) {
+  nav .desktop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav .primary.nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #240750;
+  }
+
+  nav .primary.nav-links.active {
+    display: flex;
+  }
+
+  .primary.nav-links li a {
+    padding: 12px 15px;
+    border-top: 1px solid rgba(87, 166, 161, 0.2);
+    width: 100%;
+  }
+
+  .contacto-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 98vw;
+    margin: 24px auto;
+  }
+
+  .form-contacto,
+  .progressbar-container {
+    max-width: 98vw;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .progressbar-container {
+    margin-top: 1.5rem;
+  }
+
+  .form-contacto {
+    padding: 18px 8px 14px 8px;
+  }
+}

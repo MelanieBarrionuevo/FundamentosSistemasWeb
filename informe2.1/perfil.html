@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="css/perfil.css" />
+</head>
+<body>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <nav>
+    <div class="bar"></div>
+    <div class="user">
+      <img src="https://img.freepik.com/foto-gratis/joven-barbudo-camisa-rayas_273609-5677.jpg?semt=ais_hybrid&w=740" alt="Foto de perfil" />
+      <div class="name">Marcos Rivas</div>
+    </div>
+    <div class="links">
+      <a href="index.html">
+        <div class="icon">
+          <span class="material-symbols-outlined">home</span>
+        </div>
+        <div class="title">Inicio</div>
+      </a>
+      <a href="#">
+        <div class="icon">
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <div class="title">Sobre mí</div>
+      </a>
+      <a href="#">
+        <div class="icon">
+          <span class="material-symbols-outlined">design_services</span>
+        </div>
+        <div class="title">Servicios</div>
+      </a>
+      <a href="#">
+        <div class="icon">
+          <span class="material-symbols-outlined">mail</span>
+        </div>
+        <div class="title">Contacto</div>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Sección principal -->
+  <main class="about-container">
+    <!-- About Me -->
+    <section class="about-me">
+      <div class="profile-image">
+        <img src="https://static.vecteezy.com/system/resources/previews/003/028/029/non_2x/person-and-man-vector.jpg" alt="Foto de perfil" />
+      </div>
+      <div class="info">
+        <h1>Marcos Rivas</h1>
+        <span class="tagline">UI/UX Designer, Creative Thinker</span>
+        <p>
+          Soy diseñador web con pasión por crear experiencias digitales intuitivas
+          y modernas. Me especializo en interfaces limpias, accesibles y creativas.
+        </p>
+        <div class="personal-details">
+          <ul>
+            <li><strong>Edad:</strong> 27</li>
+            <li><strong>Residencia:</strong> Ecuador</li>
+            <li><strong>Email:</strong> contacto@ejemplo.com</li>
+            <li><strong>Freelance:</strong> Disponible</li>
+          </ul>
+        </div>
+        <div class="socials">
+          <a href="#">🐦</a>
+          <a href="#">📘</a>
+          <a href="#">🔗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="progress-section">
+      <div class="progressbar-container">
+        <div class="outer-box">
+          <div class="inner-box">50%</div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+            <defs>
+              <linearGradient id="GradientColor">
+                <stop offset="0%" stop-color="#e91e63" />
+                <stop offset="100%" stop-color="#673ab7" />
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="80" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services">
+      <h2>Servicios</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="material-symbols-outlined icon">web</span>
+          <h3>Diseño Web</h3>
+          <p>Diseño moderno, adaptable y centrado en el usuario.</p>
+          <a href="#" class="cta">Ver más</a>
+        </div>
+        <div class="card">
+          <span class="material-symbols-outlined icon">photo_camera</span>
+          <h3>Fotografía</h3>
+          <p>Capturamos tu esencia con edición profesional.</p>
+          <a href="#" class="cta">Ver galería</a>
+        </div>
+        <div class="card">
+          <span class="material-symbols-outlined icon">lightbulb</span>
+          <h3>Creatividad</h3>
+          <p>Ideas frescas para destacar tu marca personal.</p>
+          <a href="#" class="cta">Solicita propuesta</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/funciones.js"></script>
+</body>
+</html>
+
