@@ -1,0 +1,30 @@
+#carouselExampleIndicators .carousel-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#carouselExampleIndicators .carousel-item img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.navbar-brand i {
+  margin-right: 8px;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.btn-success {
+  font-weight: 500;
+}
+
+#mensajeReserva {
+  min-height: 40px;
+}
