@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="estilos/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MenuBar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="acerca.html">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ejercicio1.html">Ejercicio 1</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="ejercicio2.html">Ejercicio 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ejercicio3.html">Ejercicio 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="mb-4">Ordenar Alumnos por Promedio</h1>
+
+    <div class="mb-3">
+        <label for="cantidad">Cantidad de alumnos:</label>
+        <input type="number" id="cantidad" class="form-control" placeholder="Ej. 3">
+    </div>
+
+    <button class="btn btn-primary mb-3" onclick="capturarAlumnos()">Ingresar Datos</button>
+
+    <div id="formulario"></div>
+
+    <button class="btn btn-success mb-3 d-none" id="btnOrdenar" onclick="ordenarAlumnos()">Ordenar por Promedio</button>
+
+    <div class="alert alert-info" id="resultado"></div>
+
+    <script src="funciones/calculos.js"></script>
+    <script src="estilos/js/"></script>
+</body>
+</html>
